@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+	background-image: url('https://yt3.googleusercontent.com/ytc/AOPolaQP-3Gv1IbVltFVy--HLMyHhMGTxNXPpOhwH3mQ=s900-c-k-c0x00ffffff-no-rj');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 80%;
+  width: 1400px;
+  height: 600px
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 700px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 600px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2></h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <h1>Saya kuliah di Teknik Geodesi UGM</h1>
+      <li><a href="https://geodesi.ugm.ac.id/">Link ini akan mengarah ke website Teknik Geodesi UGM</a></li>
+      <head>
+        <title>Validasi Password</title>
+    </head>
+    <body> <br> <br>
+        <h5>formulir validasi pekerjaan</h5>
+        <form action="#" method="post" onsubmit="return validatePassword()">
+            <label for="user id">User id:</label>
+            <input type="email" id="user id" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input type="submit" value="Login">
+        </form>
+    
+        <p id="error" style="color: red; display: none;">Error</p>
+    
+        <script>
+            function validatePassword() {
+                var passwordInput = document.getElementById("password").value;
+                if (passwordInput !== "Selesai") {
+                    document.getElementById("error").style.display = "block";
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Apa itu Teknik Geodesi?</h1>
+    <p style="color:Tomato;">Geodesy berasal dari bahasa Yunani, Geo (γη) = bumi dan daisia / daiein (δαιω) = membagi, 
+      kata geodaisia atau geodeien berarti membagi bumi. Menurut IAG (International Association Of Geodesy, 1979)</p>
+    <p style="color:blue;">Teknik Geodesi adalah disiplin ilmu yang mempelajari tentang pengukuran dan perepresentasian 
+      dari Bumi dan benda-benda langit lainnya,</p>
+    <p style="color:green;">termasuk medan gaya beratnya masing-masing, dalam ruang tiga dimensi yang berubah dengan waktu. Sejak zaman dahulu, 
+      Ilmu Teknik Geodesi 
+      digunakan oleh manusia untuk keperluan navigasi </p>
+    <i>Pada masa sekarang ini, bidang – bidang dari cabang ilmu geodesi yang dapat 
+      dipelajari oleh mahasiswa dapat dibagikan menjadi bidang survei dan pemetaan secara terestris, survei dan pemetaan secara hidrografis,</i>
+      <b>bidang geoinformatika atau sistem informasi geografi, bidang administrasi pertanahan dan property, 
+        bidang manajemen wilayah perbatasan dan juga bidang fotogrametri dan penginderaan jauh</b>
+    
+        <h1>Data diri mahasiswa</h1>
+        <style>
+          table, th, td {
+            border:1px solid black;
+          }
+          </style>
+          <body>
+          
+          <table style="width:100%">
+            <tr>
+              <th>Nama Mahasiswa</th>
+              <th>NIM</th>
+            </tr>
+            <tr>
+              <td>Pavel Parulian Sihaloho</td>
+              <td>20/456743/TK/50567</td>
+            </tr>
+          </table>
+  
+  </article>
+</section> <br> <br>
+<h1>5 Tempat Favorite saya di UGM</h1>
+
+<footer>
+  <p></p>
+</footer>
+
+</body>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+<title>Leaflet Web Map 2</title>
+
+<style>
+    #map {
+        height: calc(100vh - 60px);
+    }
+
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+    <a class="nav-link" href="#">Home <span class="sr-only">(current)
+    </span></a>
+    </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0"> <button class="btn btn-outline-success my-2 my-sm-0">Lokasi saya</button> </form>
+    </div>
+    </nav>
+    <div id="map"></div>
+<script>
+    var map = L.map('map',{center: [-7.79558, 110.36949], zoom: 15});
+
+    var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA,USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS UserCommunity'}).addTo(map);
+    var carto = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', {attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',subdomains: 'abcd',maxZoom: 19});
+    var baseMaps = {"Citra Satelit": esri,"Peta Carto": carto};
+
+    var Wisdom = L.marker([-7.770472, 110.382054]).bindPopup('Wisdom Park UGM (https://maps.app.goo.gl/jKeNp4QQh56GwrxB6)'),
+        Boulevard = L.marker([-7.776091, 110.376034]).bindPopup('Boulevard UGM (https://maps.app.goo.gl/HGaTF8eWSQk5aZEg9)'),
+        Gsp = L.marker([-7.770355, 110.377910]).bindPopup('GSP UGM (https://maps.app.goo.gl/PQpwwyKWEWBZr6hS8)'),
+        Tower = L.marker([-7.771263, 110.379391]).bindPopup('Pertamina Tower (https://maps.app.goo.gl/VRinyjEWCmj8bzPi7)')
+        Stadion = L.marker([-7.769346, 110.384780]).bindPopup('Stadion Pancasila (https://maps.app.goo.gl/aEFCr8JFUnxHF192A)');
+    var jogja = L.layerGroup([Wisdom, Boulevard, Gsp, Tower, Stadion]);
+    var overlayMaps = {"Jogja": jogja};
+
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+</html>
+
